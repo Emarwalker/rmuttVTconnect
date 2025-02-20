@@ -5,7 +5,12 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: '0.0.0.0', // เปิดให้เข้าถึงจากเครือข่ายภายนอก (จำเป็นสำหรับ Render)
+    host: '0.0.0.0', // เปิดให้เข้าถึงจากเครือข่ายภายนอก
     port: process.env.PORT || 4173, // ใช้พอร์ตจาก Render หรือ fallback เป็น 4173
+  },
+  preview: {
+    host: '0.0.0.0',
+    port: process.env.PORT || 4173,
+    allowedHosts: ['project-100-front.onrender.com'] // ✅ อนุญาตให้ Render ใช้งานได้
   }
 })
