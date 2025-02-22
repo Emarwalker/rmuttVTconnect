@@ -3,12 +3,13 @@ import axios from 'axios';
 const api = axios.create({
   baseURL: 'https://emarwalker.taileb79c1.ts.net/api',
   timeout: 60000,  
-  withCredentials: true,
+  withCredentials: true, // ✅ ถูกต้อง
   headers: {
     'Content-Type': 'application/json'
   }
-  withCredentials: true // ✅ สำคัญ ถ้าใช้ Cookies JW
+  withCredentials: true // ❌ ซ้ำและไม่มีเครื่องหมายจุลภาค (`,`) ด้านหน้า
 });
+
 
 api.interceptors.response.use(
   response => response,
