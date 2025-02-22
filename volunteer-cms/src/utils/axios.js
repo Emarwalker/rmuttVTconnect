@@ -7,7 +7,6 @@ const api = axios.create({
   headers: {
     'Content-Type': 'application/json'
   }
-  withCredentials: true // ❌ ซ้ำและไม่มีเครื่องหมายจุลภาค (`,`) ด้านหน้า
 });
 
 
