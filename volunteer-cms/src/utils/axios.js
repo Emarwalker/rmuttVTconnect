@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://project-back-deploy100-g88h.onrender.com/api',
+  baseURL: 'https://frame.mmiiprpkr.store/api',
   timeout: 60000,  
   withCredentials: true, // ✅ ถูกต้อง
   headers: {
